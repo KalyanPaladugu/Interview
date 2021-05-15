@@ -45,8 +45,7 @@ Both storage objects provide same methods and properties:
 
 |  localStorage | 	sessionStorage |
 | ------------- | ------------- |
-| Shared between all tabs and windows with the same origin	
-	  | Visible within a browser tab, including iframes from the same origin  |
+| Shared between all tabs and windows with the same origin	| Visible within a browser tab, including iframes from the same origin  |
 | Survives browser restart  | Survives page refresh (but not tab close)  |
 + ![link](https://javascript.info/localstorage)
 
