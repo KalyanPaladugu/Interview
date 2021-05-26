@@ -49,3 +49,8 @@ Both storage objects provide same methods and properties:
 | Survives browser restart  | Survives page refresh (but not tab close)  |
 + [Referance link](https://javascript.info/localstorage)
 
+
+### Axios
+
++ Axios is a Javascript library used to make HTTP requests from node. js or XMLHttpRequests from the browser and it supports the Promise API that is native to JS ES6. It can be used intercept HTTP requests and responses and enables client-side protection against XSRF
++ Axios (a promise-based HTTP client) and Fetch API (a browser in-built web API)
