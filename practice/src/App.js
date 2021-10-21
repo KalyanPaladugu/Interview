@@ -8,7 +8,7 @@ import HoverCounter from './components/HoverCounter';
 function App() {
   return (
     <div className="App">
-     <ClickCounter />
+     <ClickCounter  name="Kalyan" />
   <HoverCounter />
     </div>
   );
