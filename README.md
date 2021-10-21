@@ -8,6 +8,110 @@
     + window.location.href;
     + document.URL;
 
+
+### Promises
+
++ Promise is an object, It will represents the status of Asynchronous Operations
++ States in promises
+    + pending
+    + fulfilled/resolve
+    + reject
++ If the promise is fulfilled the response can represent with then function
++ If the promise is rejected the error can display with in catch function
+
+```
+<script>
+        var result=new Promise(function (resolve,reject){
+           var data=true;
+        //    var data=false;
+           if(data){
+               resolve("It's true statement")
+           }
+           else {
+               reject("It's false statement")
+           }
+        })
+        console.log(result)
+        result.then(response => {
+            console.log(response)
+        }).catch(res=>{
+            console.log(res)
+        })
+    </script>
+
+ ```
+
+###  callback functions
+
++ Passing function as argument for the another function
+```
+ function fname(){ var firstName="Kalyan";
+        console.log(firstName)}
+        function name(demo,lname) { var fullname="Paladugu";
+                
+          console.log(fullname);
+          demo();
+          console.log(lname)
+    }
+        name(fname,"Chakravarthi");
+
+```
+
+### closures
+
++ A closure gives you access to an outer function’s scope from an inner function
+
+```
+function init() {
+  var name = 'Mozilla'; // name is a local variable created by init
+  function displayName() { // displayName() is the inner function, a closure
+    alert(name); // use variable declared in the parent function
+  }
+  displayName();
+}
+init();
+```
+
+### async and await
+
+
++ `async` ensures that the function returns a promise, and wraps non-promises in it.
++ The keyword `await` makes JavaScript wait until that promise settles and returns its result.
+```
+async function f() {
+
+  let promise = new Promise((resolve, reject) => {
+    setTimeout(() => resolve("done!"), 1000)
+  });
+
+  let result = await promise; // wait until the promise resolves (*)
+
+  alert(result); // "done!"
+}
+
+f();
+
+example2:
+========= 
+
+function resolveAfter2Seconds() {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve('resolved');
+    }, 2000);
+  });
+}
+
+async function asyncCall() {
+  console.log('calling');
+  const result = await resolveAfter2Seconds();
+  console.log(result);
+  // expected output: "resolved"
+}
+
+asyncCall();
+```
+
 Higher Order Components:
 ========================
 

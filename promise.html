@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var result=new Promise(function (resolve,reject){
+        //    var data=true;
+        // //    var data=false;
+        //    if(data){
+        //        resolve("It's true statement")
+        //    }
+        //    else {
+        //        reject("It's false statement")
+        //    }
+        // })
+        // console.log(result)
+        // result.then(response => {
+        //     console.log(response)
+        // }).catch(res=>{
+        //     console.log(res)
+        // })
+
+        // callback function
+
+    //     function fname(){ var firstName="Kalyan";
+    //     console.log(firstName)}
+    //     function name(demo,lname) { var fullname="Paladugu";
+                
+    //       console.log(fullname);
+    //       demo();
+    //       console.log(lname)
+    // }
+    //     name(fname,"Chakravarthi");
+    let fname=() =>{ var firstname="Kalyan";console.log(firstname);}
+    let name=(demo,lname) =>{ var fullname="Paladugu";console.log(fullname);
+demo();
+console.log(lname);}
+let result=name(fname,"Chakravarthi")
+console.log(result);
+    </script>
+</body>
+</html>
