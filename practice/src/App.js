@@ -9,11 +9,12 @@ import UseStateWithObject from './components/UseStateWithObject';
 import UseStateWithArray from './components/UseStateWithArray';
 import ClassCounterOne from './components/ClassCounterOne';
 import HookCounterOne from './components/HookCounterOne';
+import DataFetching from './components/DataFetching';
 function App() {
   return (
     <div className="App">
- {/* <ClassCounterOne /> */}
- <HookCounterOne />
+ <DataFetching />
+ 
     </div>
   );
 }
