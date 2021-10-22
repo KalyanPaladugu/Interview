@@ -12,6 +12,7 @@ import ClassCounterOne from './components/ClassCounterOne';
 import HookCounterOne from './components/HookCounterOne';
 import DataFetching from './components/DataFetching';
 import ComponentC from './components/ComponentC';
+import ReduceCount from './components/ReduceCount';
 
 export const UserContext=React.createContext()
 export const ChanelContext=React.createContext()
@@ -19,12 +20,14 @@ function App() {
   return (
     <div className="App">
 
-<UserContext.Provider value={"Kalyan"}>
+{/* <UserContext.Provider value={"Kalyan"}>
   <ChanelContext.Provider value={"98.3"}>
   <ComponentC />
     </ChanelContext.Provider>
 
-  </UserContext.Provider>
+  </UserContext.Provider> */}
+
+  <ReduceCount />
 
  
     </div>
