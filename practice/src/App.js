@@ -13,6 +13,7 @@ import HookCounterOne from './components/HookCounterOne';
 import DataFetching from './components/DataFetching';
 import ComponentC from './components/ComponentC';
 import ReduceCount from './components/ReduceCount';
+import DataFetchingOne from './components/DataFetchingOne';
 
 export const UserContext=React.createContext()
 export const ChanelContext=React.createContext()
@@ -27,8 +28,8 @@ function App() {
 
   </UserContext.Provider> */}
 
-  <ReduceCount />
-
+  {/* <ReduceCount /> */}
+<DataFetchingOne />
  
     </div>
   );
