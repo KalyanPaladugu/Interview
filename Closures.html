@@ -7,14 +7,61 @@
     <title>Document</title>
 </head>
 <body>
+
+    <p>Welcome</p>
     <script>
-        let demo=() =>{
-            var name="Kalyan";
-            let demo1=()=>{
-                console.log(name)
+
+//         function demo(){
+//             var name="Kalyan";
+//             function demo1(){
+//                return name
+//             }
+//             return demo1()
+//         }
+
+// let result=demo()
+//  console.log(result)
+
+
+//Practical closures 
+// function makeSizer(size){
+
+// return function (){
+//     document.body.style.fontSize=size +'px'
+// }
+// }
+
+// makeSizer(100)
+
+
+// Scope chain
+
+
+let x=4; //globalscope
+
+function sum(a){
+    return  function sum1(b){
+        console.log(b)
+        return function sum2(c){ //outer scope
+        console.log(c)
+            return function sum3(){ 
+                //localscoope
+                return a+b+c+x
             }
         }
-        demo()
+    }
+}
+
+
+// let result=sum(1)
+// let r1=result(2);
+// let r2=r1(3);
+// let r3=r2(4);
+let result =sum(1)(2)(3)()
+console.log(result)
+// console.log(r3)
+
+
     </script>
 </body>
 </html>
