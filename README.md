@@ -360,3 +360,137 @@ When bar returns, the stack is empty.
 {this.state.user && <h1>{this.state.username}</h1>}
 
 ```
+
+#### Routing 
+
++ Rounting means navigating from one URL to another URL without refreshing the application everytime
+
++ Primary components
+  + routers like `BrowserRouter` anf `HashRouter`
+  + route matches like `Route` and `Switch` or `Routes`
+  + Navigation like `Link`,`Navlink` and `Redirect`
+
++ In `Route` the order of precedence is children -> component -> render 
++ In switch it will load firstmatch url content in the route .To avoid that use `exact` in the route. Better to give lengthy url first
++ To match specific URL in the route we have different options
+  - exact
+  - strict
+  - sensitive
+
++ Navigation
+
+- Link
+  - it contains to property
+  - To update the UI without refresh the page
+
+##### iterators & Generators
+
+
++ In ES6 Iterators and generators have officially added
+
++ Iterators
+  - Iterators allow you to iterate over any object(Arrays are also objects) that follows the specification
+  - Iterable objects are objects that can be iterated over with for..of.
+  - Technically, iterables must implement the `Symbol.iterator` method
+  - Iterable objects are objects that can be iterated over with `for..of`
+  - The next() method must return an object with two properties:
+     - value (the next value)
+     - done (true or false)`
+```
+function myNumbers() {
+  let n = 0;
+  return {
+    next: function() {
+
+      n += 10;
+      return {value:n, done:false};
+    }
+  };
+}
+
+// Create Iterable
+const n = myNumbers();
+n.next(); // Returns 10
+n.next(); // Returns 20
+n.next(); // Returns 30
+```
+
++ Generators
+
+  - Regular functions return only one, single value (or nothing).
+
+  - Generators can return (“yield”) multiple values, one after another, on-demand. They work great with iterables, allowing to create data streams with ease.
+
+  - Generator functions
+    - To create a generator, we need a special syntax construct: function*, so-called “generator function”.
+
+  - It looks like this:
+
+```
+function* generateSequence() {
+  yield 1;
+  yield 2;
+  return 3;
+}
+let generator = generateSequence();
+
+let one = generator.next();
+
+alert(JSON.stringify(one)); 
+```
+
+##### Pure Functions & Higher Order Functions
+
++ Pure functions
+
+  - Given the same input will always return the same output
+  - Have no side effects(only access the data the is passed to it)
+
++ Higher Order Functions
+
+  - May accept function as parameter
+  - Will return a function
+
+```
+function getCapture(camera) {
+  // Invoke the passed function
+  camera();
+}
+
+// Invoke the function by passing a function as an argument
+getCapture(function(){
+  console.log('Canon');
+});
+
+Ex:2
+----
+// Define a function that returns a function
+function returnFunc() {
+  return function() {
+    console.log('Hi');
+  }
+}
+
+// Take the returned function in a variable.
+const fn = returnFunc();
+// Now invoke the returned function.
+fn(); // logs 'Hi' in the console
+
+// Alternatively - A bit odd syntax but good to know
+returnFunc()(); // logs 'Hi' in the console
+```
+
+
+##### PureComponent
+
++ Pure component will re-render only when shallow comparison of state is occured
++ If we extend a class with Pure Component, there is no need for shouldComponentUpdate() Lifecycle Method
++ In simple words, If the previous value of state or props and the new value of state or props is the same, the component will not re-render itself.
+
+##### Higher Order Component
++ a higher-order component is a function that takes a component and returns a new component.
+
++ code reusability is main advantage
+```
+const EnhancedComponent = higherOrderComponent(WrappedComponent);
+```
