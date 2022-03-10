@@ -32,7 +32,41 @@
 
 // Question3: Caching and memoize function 
 
+```
+const  memo=(func) =>{
+  
+  const result={}
+  return (...arg)=>{
+    const argkey=JSON.stringify(...arg);
+     if(!result[argkey]){
+       result[argkey]=func(...arg)
+       
+     }
+    return result[argkey]
+    
+  }
+}
 
+
+let  demo= memo((a,b)=>{
+  for (let i=0;i<10000000000;i++){
+    
+  }
+  return a+b
+})
+
+const ttime=new Date();
+console.log
+(demo(2,3))
+const re=new Date()- ttime;
+console.log(re)
+
+const ttime1=new Date();
+console.log
+(demo(2,3))
+const re1=new Date()- ttime1;
+console.log(re1)
+```
 // function myMemoize(fn,context){
 //     const res={};
 //     return function (...args){
