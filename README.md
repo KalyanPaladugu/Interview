@@ -8,7 +8,45 @@
     + window.location.href;
     + document.URL;
 
+#### Arrays
 
++ `splice` method returns deleted items as an array and change the original array
+```
+let arr=[1,2,3,4,5,6]
+console.log(arr.splice(4))
+console.log(arr)
+o/p:
+[5,6]
+[1,2,3,4]
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.splice(2, 0, "Lemon", "Kiwi");
+
+```
++ Here 2 is index position and 0 is number of elements  to be remove from an array
++ `slice` method returns the selected items and doesn't change the original array
+```
+let arr=[1,2,3,4,5,6]
+console.log(arr.slice(4))
+o/p: [5,6]
+
+let arr=[1,2,3,4,5,6]
+console.log(arr.slice(1,4))
+o/p: [2,3,4]
+
+```
+##### Array tostring
+
+```
+let arr=[1,2,3,4,5,6]
+let d=arr.toString()
+console.log(d)
+console.log(d.split(','))
+
+o/p:
+"1,2,3,4,5,6"
+["1", "2", "3", "4", "5", "6"]
+
+```
 ### Promises
 
 + Promise is an object, It will represents the status of Asynchronous Operations
