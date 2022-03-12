@@ -8,7 +8,32 @@
     + window.location.href;
     + document.URL;
 
-#### Arrays
+##### Extracting a string
+
++ `slice` 
+
+```
+let str = "Apple, Banana, Kiwi";
+console.log(str.slice(5))
+console.log(str.slice(1,5))
+
+o/p:
+
+", Banana, Kiwi"
+"pple"
+
+```
++ `substring` is similar to `slice` but it cannot access negative indexs
++ substr() is similar to slice().
+   - The difference is that the second parameter specifies the length of the extracted part.
+ 
+```
+let str = "Apple, Banana, Kiwi";
+console.log(str.substr(7,5))
+
+o/p:
+"Banan"
+# Arrays
 
 + `splice` method returns deleted items as an array and change the original array
 ```
