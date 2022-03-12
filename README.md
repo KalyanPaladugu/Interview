@@ -47,6 +47,41 @@ o/p:
 ["1", "2", "3", "4", "5", "6"]
 
 ```
+
+##### Sorting Array
+```
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+console.log(fruits.sort())
+o/P:
+["Apple", "Banana", "Mango", "Orange"]
+
+const list = [13213,2112,1323,11,12];
+console.log(list.sort((a,b) =>   a-b))
+
+[11, 12, 1323, 2112, 13213]
+
+```
+
+##### Sorting objects in array
+
+```
+const cars = [
+  {type:"Volvo", year:2016},
+  {type:"Saab", year:2001},
+  {type:"BMW", year:2010}
+];
+
+let re=cars.sort((a,b) => a.year-b.year)
+console.log(re)
+
+```
+##### Max and Min value in an array
+
+```
+const list = [13213,2112,1555323,11,12];
+
+console.log(Math.min.apply(null,list))
+```
 ### Promises
 
 + Promise is an object, It will represents the status of Asynchronous Operations
