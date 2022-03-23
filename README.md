@@ -21,7 +21,6 @@ o/p:
 
 ", Banana, Kiwi"
 "pple"
-
 ```
 + `substring` is similar to `slice` but it cannot access negative indexs
 + substr() is similar to slice().
