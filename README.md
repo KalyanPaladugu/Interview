@@ -168,6 +168,7 @@ function init() {
   displayName();
 }
 init();
+
 ```
 
 ### async and await
@@ -175,6 +176,7 @@ init();
 
 + `async` ensures that the function returns a promise, and wraps non-promises in it.
 + The keyword `await` makes JavaScript wait until that promise settles and returns its result.
+
 ```
 async function f() {
 
@@ -208,6 +210,7 @@ async function asyncCall() {
 }
 
 asyncCall();
+
 ```
 
 Higher Order Components:
