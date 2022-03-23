@@ -21,6 +21,7 @@ o/p:
 
 ", Banana, Kiwi"
 "pple"
+
 ```
 + `substring` is similar to `slice` but it cannot access negative indexs
 + substr() is similar to slice().
@@ -35,6 +36,7 @@ o/p:
 # Arrays
 
 + `splice` method returns deleted items as an array and change the original array
+
 ```
 let arr=[1,2,3,4,5,6]
 console.log(arr.splice(4))
