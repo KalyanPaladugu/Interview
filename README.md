@@ -34,7 +34,7 @@ console.log(str.substr(7,5))
 o/p:
 "Banan"
 # Arrays
-
+```
 + `splice` method returns deleted items as an array and change the original array
 
 ```
@@ -326,7 +326,7 @@ ReactJS Interview Questions:
   - `fetch`
   - `axios`
 
-  ```
+ ```
   fetch('https://api.github.com/users').then(response=>response.json()).
  then(data=> console.log(data))
 
@@ -431,7 +431,8 @@ When bar returns, the stack is empty.
  - onClick
  - onSubmit etc...
 + If we want to bind the function to component in the constructor we have to bind the function .In ES6 it may be don't need
-  ```
+ 
+ ```
  constructor(props) {
          super();
         //  this.submit=this.submit.bind(this);
